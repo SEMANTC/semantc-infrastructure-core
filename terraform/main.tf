@@ -4,7 +4,7 @@ provider "google" {
   credentials = file(var.terraform_sa_key_path)
 }
 
-# Enable Required APIs
+# enable required APIs
 resource "google_project_service" "enabled_services" {
   for_each = toset(var.required_services)
 
@@ -14,7 +14,7 @@ resource "google_project_service" "enabled_services" {
   disable_on_destroy = false
 }
 
-# Create Master Service Account Module
+# create master service account module
 module "master_service_account" {
   source               = "./modules/service_account"
   project_id           = var.project_id
