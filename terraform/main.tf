@@ -38,3 +38,14 @@ module "master_service_account" {
   sa_display_name      = var.master_sa_display_name
   additional_roles     = var.master_sa_roles
 }
+
+# create core resources module
+module "core_resources" {
+  source               = "./modules/core_resources"
+  sa_email             = module.master_service_account.service_account_email 
+  project_id           = var.project_id
+  region               = var.region
+  sa_id                = var.master_sa_id
+  client_id            = var.client_id
+  client_secret        = var.client_secret
+}

@@ -48,3 +48,13 @@ variable "master_sa_roles" {
     "roles/storage.admin",
   ]
 }
+
+variable "client_id" {
+  description = "client_id for the xero app"
+  type        = string
+}
+
+variable "client_secret" {
+  description = "client_secret for the xero app"
+  type        = string
+}
