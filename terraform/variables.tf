@@ -36,6 +36,7 @@ variable "required_services" {
     "cloudbuild.googleapis.com",
     "logging.googleapis.com",
     "monitoring.googleapis.com",
+    "cloudscheduler.googleapis.com",
   ]
 }
 
@@ -46,6 +47,8 @@ variable "master_sa_roles" {
     "roles/run.admin",
     "roles/bigquery.admin",
     "roles/storage.admin",
+    "roles/cloudscheduler.admin",
+    "roles/run.invoker",
   ]
 }
 
