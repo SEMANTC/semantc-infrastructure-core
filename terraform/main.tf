@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "terraform-state-semantic-dev-437910"
+    bucket = "terraform-state-semantc-dev-437910"
     prefix = "terraform/master_sa_state"
   }
 }
