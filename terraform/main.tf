@@ -8,10 +8,7 @@ terraform {
     }
   }
 
-  backend "gcs" {
-    bucket = "terraform-state-semantc-dev-437910"
-    prefix = "terraform/master_sa_state"
-  }
+  backend "gcs" {}
 }
 
 provider "google" {
